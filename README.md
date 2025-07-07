@@ -41,7 +41,7 @@ For Windows & Mac/Linux:
 py -m venv venv
 ```
 
-### 3. Activate the Virtual Environment
+### 3.1 Activate the Virtual Environment
 
 To activate the virtual environment:
 
@@ -62,7 +62,7 @@ cd venv\Scripts
 source venv/bin/activate
 ```
 
-### 3. Install Python Dependencies
+### 3.2 Install Python Dependencies
 
 With the virtual environment activated, return to the root directory and install the necessary Python dependencies by running:
 
@@ -71,6 +71,13 @@ cd ../..
 pip install -r requirements.txt
 ```
 
+## 3.3 (Optional) Run the scraper 
+
+As to not wait the scheduled day for the scraper to run, you can run it immediately.
+While venv is still activated, run the scraper from the root directory:
+```bash
+python .\scripts\scraper.py
+```
 
 ### 4. Run the Laravel Migrations
 
@@ -80,14 +87,6 @@ To set up your database and run the necessary migrations, use the following comm
 php artisan migrate
 ```
 
-
-### 5. Running the Scraper Script
-
-To execute the scraper script and start scraping the required data, use the following command:
-
-```bash
-python scripts/scraper.py
-```
 ### 6. Generate App Key & Run the Development Server
 
 ```bash
