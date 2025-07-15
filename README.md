@@ -15,7 +15,7 @@ Ensure you have the following software installed on your machine:
 - **pip** (Python package manager)
 - **Virtualenv** (for Python virtual environment)
 
-Additionally, ensure that you have a working MySQL database setup for Laravel migrations. The database should be named concurringprices
+Additionally, ensure that you have a working MySQL database setup for Laravel migrations. The database should be named concurringprices and it contains the default username & password for the server
 
 ---
 
@@ -92,4 +92,12 @@ php artisan migrate
 ```bash
 php artisan key:generate
 php artisan serve
+```
+
+### 7. (Optional) Schedule the job
+
+To schedule the job, use the following command
+
+```bash
+php artisan schedule:work
 ```
