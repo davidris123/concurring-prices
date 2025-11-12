@@ -3,6 +3,9 @@
 ## Description
 A simple PHP laravel app intended to showcase the different prices of products in stores across Macedonia.
 
+## Screenshot
+![Homepage](images/image.png)
+
 ---
 
 ## Prerequisites

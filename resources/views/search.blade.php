@@ -15,15 +15,15 @@
 <div class="container header-bar text-center py-3 mb-3">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
         <div><strong>Вкупно:</strong> {{ $products->total() }} производи</div>
-        <h4>Concurring-Prices</h4>
+        <a href="/" style="text-decoration: none; color: inherit"> <h4>Concurring-Prices</h4> </a>
         <div>
         <span class="text-light large">
           Последно ажурирано:
             @php
-                $latestProduct = $products->firstWhere('available', true);
+                $latestProduct = $products->sortByDesc('updated_at')->first();
             @endphp
             {{ $latestProduct
-               ? $latestProduct->updated_at->format('d/m/Y')
+               ? $latestProduct->updated_at->format('jS F Y')
                : 'N/A'
             }}
         </span>
